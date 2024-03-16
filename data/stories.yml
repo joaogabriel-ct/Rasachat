@@ -1,0 +1,65 @@
+version: "3.1"
+
+stories:
+
+- story: Buscar pregões 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buscar_pregoes
+  - action: action_buscar_licitacoes
+
+- story: Buscar pregões por estados
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buscar_pregoes_estados
+  - action: action_buscar_licitacoes_estado
+
+- story: Buscar Pregão Detalhado
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buscar_detalhes_pregao
+  - action: action_detalhes_pregao
+
+- story: Buscar pregões por modalidade e estado
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buscar_pregoes_por_modalidade_e_estado
+  - action: action_buscar_pregoes_por_modalidade_e_estado
+
+- story: Buscar orgão 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: busca_orgao
+  - action: action_detalhes_pregao
+
+- story: Caminho feliz
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: Caminho triste 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Caminho triste 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

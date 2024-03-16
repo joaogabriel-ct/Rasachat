@@ -1,0 +1,138 @@
+version: "3.1"
+
+nlu:
+- intent: buscar_pregoes
+  examples: |
+    - Mostre pregões próximos
+    - Quais são os pregões disponíveis?
+    - Buscar pregões próximos.
+    - Quais os pregões em aberto?
+    - Lista de pregões em andamento?
+    - Mostra os pregões próximos
+    - Pode me mostrar os pregões disponíveis?
+    - Quais são os pregões disponíveis para hoje?
+    - Onde posso encontrar informações sobre os pregões?
+    - Pode me dizer quais são os pregões ativos?
+
+- intent: buscar_pregoes_estados
+  examples: |
+    - Mostra os próximos pregões no [estado São Paulo](estado)
+    - Quais são os pregões disponíveis em [Brasília](estado)?
+    - Buscar pregões próximos para [Goias](estado).
+    - Quais os pregões em aberto em [Minas Gerais](estado)?
+    - Lista de pregões em andamento no [estado São Paulo](estado)?
+
+- intent: buscar_detalhes_pregao
+  examples: |
+    - Quero detalhes sobre o pregão [12345]
+    - Me dê informações sobre o pregão número [67890]
+    - Detalhes do pregão [54321]
+    - Informações sobre pregão [98765]
+
+- intent: busca_orgao
+  examples: |
+    - Pregões para os orgãos [COMANDO DO EXERCITO](orgao)
+    - Informações sobre o pregão para o orgão [COMANDO DO EXERCITO](orgao)
+    - orgão [COMANDO DO EXERCITO](orgao)
+    - [COMANDO DO EXERCITO](orgao)
+
+- intent: buscar_pregoes_por_modalidade_e_estado
+  examples: |
+    - Mostre pregões de [concorrência](modalidade) em [São Paulo](estado)
+    - Quais são os pregões de [inexigibilidade](modalidade) em [Minas Gerais](estado)?
+    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](estado)
+    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](estado)
+    - Mostre pregões de [concorrência](modalidade) em [São Paulo](estado)
+    - Quais são os pregões de [inexigibilidade](modalidade) em [Minas Gerais](estado)?
+    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](estado)
+    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](estado)
+    - Quais são os pregões de [concorrência](modalidade) em [São Paulo](estado) com valor estimado acima de R$ 100.000?
+    - Mostre os pregões de [inexigibilidade](modalidade) em [Minas Gerais](estado) com edital publicado após 01/01/2024
+    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](estado) com valor homologado acima de R$ 50.000
+    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](estado) com edital publicado entre 01/01/2023 e 31/12/2023
+
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - oi, tudo bem?
+    - bom dia
+    - boa tarde
+    - boa noite
+    - oi, como vai?
+    - vamos lá
+    - ei, tudo bem?
+    - ei, amigo
+    - bom dia
+    - boa tarde
+    - boa noite
+
+- intent: goodbye
+  examples: |
+    - tchau
+    - até mais
+    - até logo
+    - boa noite
+    - adeus
+    - até mais tarde
+    - vejo você por aí
+    - tchau tchau
+    - nos vemos depois
+    - tenha um bom dia
+
+- intent: affirm
+  examples: |
+    - sim
+    - claro
+    - com certeza
+    - isso parece bom
+    - correto
+    - concordo
+    - estou de acordo
+    - positivo
+    - está certo
+
+- intent: deny
+  examples: |
+    - não
+    - nunca
+    - não gosto disso
+    - de jeito nenhum
+    - nem pensar
+    - não realmente
+    - não é verdade
+
+- intent: mood_great
+  examples: |
+    - perfeito
+    - ótimo
+    - incrível
+    - me sentindo como um rei
+    - maravilhoso
+    - estou me sentindo muito bem
+    - estou ótimo
+    - estou incrível
+    - estou indo salvar o mundo
+    - super animado
+    - extremamente bom
+    - muito bom
+
+- intent: mood_unhappy
+  examples: |
+    - meu dia foi horrível
+    - estou triste
+    - não me sinto muito bem
+    - estou decepcionado
+    - super triste
+    - estou muito triste
+    - muito triste
+    - infeliz
+    - não estou bem
+    - muito triste
+
+- intent: bot_challenge
+  examples: |
+    - você é um robô?
+    - estou falando com um robô?
+    - você é humano?
+    - estou falando com um humano?

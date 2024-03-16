@@ -1,0 +1,48 @@
+version: "3.1"
+
+rules:
+
+- rule: Dizer adeus sempre que o usuário disser adeus
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Dizer 'Eu sou um robô' sempre que o usuário desafiar
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Responder a pedidos sobre pregões
+  condition:
+  - active_loop: null
+  steps:
+  - intent: buscar_pregoes
+  - action: action_buscar_licitacoes
+
+- rule: Responder a pedidos de pregões por estado
+  condition:
+  - active_loop: null
+  steps:
+  - intent: buscar_pregoes_estados
+  - action: action_buscar_licitacoes_estado
+
+- rule: Fornecer detalhes sobre um pregão específico
+  condition:
+  - active_loop: null
+  steps:
+  - intent: buscar_detalhes_pregao
+  - action: action_detalhes_pregao
+
+- rule: Buscar detalhes sobre um pregão um orgão especifico
+  condition:
+  - active_loop: null
+  steps:
+  - intent: busca_orgao
+  - action: action_detalhes_pregao
+
+- rule: Buscar pregões por modalidade e estado
+  condition:
+  - active_loop: null
+  steps:
+  - intent: buscar_pregoes_por_modalidade_e_estado
+  - action: action_buscar_pregoes_por_modalidade_e_estado
