@@ -1,0 +1,46 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - buscar_pregoes
+  - buscar_pregoes_estados
+  - buscar_detalhes_pregao
+  - busca_orgao
+  - buscar_pregoes_por_modalidade_e_estado
+
+responses:
+  utter_greet:
+  - text: "Oi! Como posso ajudar você hoje?"
+
+  utter_cheer_up:
+  - text: "Aqui está algo para te animar:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Isso ajudou?"
+
+  utter_happy:
+  - text: "Ótimo, continue assim!"
+
+  utter_goodbye:
+  - text: "Tchau"
+
+  utter_iamabot:
+  - text: "Sou um bot, criado para responder sobre pregões."
+
+actions:
+ - action_buscar_licitacoes
+ - action_buscar_licitacoes_estado
+ - action_detalhes_pregao
+ - action_buscar_orgao
+ - action_buscar_pregoes_por_modalidade_e_estado
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
