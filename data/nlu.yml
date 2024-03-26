@@ -16,6 +16,7 @@ nlu:
 
 - intent: buscar_pregoes_estados
   examples: |
+    
     - Mostra os próximos pregões no [estado São Paulo](estado)
     - Quais são os pregões disponíveis em [Brasília](estado)?
     - Buscar pregões próximos para [Goias](estado).
@@ -36,20 +37,36 @@ nlu:
     - orgão [COMANDO DO EXERCITO](orgao)
     - [COMANDO DO EXERCITO](orgao)
 
-- intent: buscar_pregoes_por_modalidade_e_estado
+- intent: buscar_pregoes_por_modalidade_cidade_estado
   examples: |
-    - Mostre pregões de [concorrência](modalidade) em [São Paulo](estado)
-    - Quais são os pregões de [inexigibilidade](modalidade) em [Minas Gerais](estado)?
-    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](estado)
-    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](estado)
-    - Mostre pregões de [concorrência](modalidade) em [São Paulo](estado)
-    - Quais são os pregões de [inexigibilidade](modalidade) em [Minas Gerais](estado)?
-    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](estado)
-    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](estado)
-    - Quais são os pregões de [concorrência](modalidade) em [São Paulo](estado) com valor estimado acima de R$ 100.000?
-    - Mostre os pregões de [inexigibilidade](modalidade) em [Minas Gerais](estado) com edital publicado após 01/01/2024
-    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](estado) com valor homologado acima de R$ 50.000
-    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](estado) com edital publicado entre 01/01/2023 e 31/12/2023
+    - [Mato grosso do Sul](cidade)[concorrência](modalidade)
+    - [Mato grosso do Sul](cidade),[concorrência](modalidade)
+    - Mostre pregões de [concorrência](modalidade) em [São Paulo](cidade)
+    - Quais são os pregões de [inexigibilidade](modalidade) em [Minas Gerais](cidade)?
+    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](cidade)
+    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](cidade)
+    - Mostre pregões de [concorrência](modalidade) em [São Paulo](cidade)
+    - Quais são os pregões de [inexigibilidade](modalidade) em [Minas Gerais](cidade)?
+    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](cidade)
+    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](cidade)
+    - Quais são os pregões de [concorrência](modalidade) em [São Paulo](cidade) com valor estimado acima de R$ 100.000?
+    - Mostre os pregões de [inexigibilidade](modalidade) em [Minas Gerais](cidade) com edital publicado após 01/01/2024
+    - Pregões de [pregao eletrônico](modalidade) em [Rio de Janeiro](cidade) com valor homologado acima de R$ 50.000
+    - Quero ver os pregões de [tomada de preços](modalidade) em [Bahia](cidade) com edital publicado entre 01/01/2023 e 31/12/2023
+    - [mt](estado)[concorrência](modalidade)
+    - [MT](estado),[concorrência](modalidade)
+    - Mostre pregões de [concorrência](modalidade) em [sp](estado)
+    - Quais são os pregões de [inexigibilidade](modalidade) em [Mg](estado)?
+    - Pregões de [pregao eletrônico](modalidade) em [rJ](estado)
+    - Quero ver os pregões de [tomada de preços](modalidade) em [ba](estado)
+    - Mostre pregões de [concorrência](modalidade) em [sp](estado)
+    - Quais são os pregões de [inexigibilidade](modalidade) em [mg](estado)?
+    - Pregões de [pregao eletrônico](modalidade) em [Rj](estado)
+    - Quero ver os pregões de [tomada de preços](modalidade) em [BA](estado)
+    - Quais são os pregões de [concorrência](modalidade) em [sp](estado) com valor estimado acima de R$ 100.000?
+    - Mostre os pregões de [inexigibilidade](modalidade) em [MG](estado) com edital publicado após 01/01/2024
+    - Pregões de [pregao eletrônico](modalidade) em [RJ](estado) com valor homologado acima de R$ 50.000
+    - Quero ver os pregões de [tomada de preços](modalidade) em [BA](estado) com edital publicado entre [01/01/2023] e 31/12/2023
 
 - intent: greet
   examples: |

@@ -40,9 +40,9 @@ rules:
   - intent: busca_orgao
   - action: action_detalhes_pregao
 
-- rule: Buscar pregões por modalidade e estado
+- rule: Buscar pregões por modalidade e estado ou cidade
   condition:
   - active_loop: null
   steps:
-  - intent: buscar_pregoes_por_modalidade_e_estado
-  - action: action_buscar_pregoes_por_modalidade_e_estado
+  - intent: buscar_pregoes_por_modalidade_cidade_estado
+  - action: action_buscar_pregoes_por_filtros

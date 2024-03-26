@@ -12,7 +12,7 @@ intents:
   - buscar_pregoes_estados
   - buscar_detalhes_pregao
   - busca_orgao
-  - buscar_pregoes_por_modalidade_e_estado
+  - buscar_pregoes_por_modalidade_cidade_estado
 
 responses:
   utter_greet:
@@ -39,7 +39,7 @@ actions:
  - action_buscar_licitacoes_estado
  - action_detalhes_pregao
  - action_buscar_orgao
- - action_buscar_pregoes_por_modalidade_e_estado
+ - action_buscar_pregoes_por_filtros
 
 session_config:
   session_expiration_time: 60

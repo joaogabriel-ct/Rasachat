@@ -55,7 +55,7 @@ class ActionBuscarPregoesPorEstado(Action):
         
         return []
 
-class ActionBuscarPregoesPorEstado(Action):
+class ActionBuscarPregoesPorOrgao(Action):
     def name(self) -> Text:
         return "action_buscar_orgao"
 
@@ -104,18 +104,18 @@ class ActionBuscarPregoesDetalhado(Action):
         resposta_licitacoes = []
         for i in data:
             resposta_licitacoes.append(f"""
-            Numero: {i["numero"]},
-            Descrição: {i['descricao']},
-            Tipo: {i["tipo"]},
-            Valor estimado: {i["valor_uitario_estimado"]},
-            Valor Total: {i["valor_total"]},
-            Quantidade: {i["quantidade"]},
-            Unidade de medida: {i["unidade_medida"]},
-            Orçamento sigiloso: {i["orcamento_sigiloso"]},
-            Categoria: {i["categoria"]},
-            Criterio Julgamento: {i["criterio_julgamento"]},
-            Situação de Compra: {i["situacao_compra"]},
-            Tipo de Beneficio: {i["tipo_beneficio"]},
+            Numero: {i["numero"]},\n
+            Descrição: {i['descricao']},\n
+            Tipo: {i["tipo"]},\n
+            Valor estimado: {i["valor_uitario_estimado"]},\n
+            Valor Total: {i["valor_total"]},\n
+            Quantidade: {i["quantidade"]},\n
+            Unidade de medida: {i["unidade_medida"]},\n
+            Orçamento sigiloso: {i["orcamento_sigiloso"]},\n
+            Categoria: {i["categoria"]},\n
+            Criterio Julgamento: {i["criterio_julgamento"]},\n
+            Situação de Compra: {i["situacao_compra"]},\n
+            Tipo de Beneficio: {i["tipo_beneficio"]},\n
             Incentivo produtivo basico: {i["incentivo_produtivo_basico"]}
             """)
         
@@ -152,11 +152,11 @@ class ActionBuscarPregoesPorModalidadeEEstado(Action):
                 if data:
                     # Formatar e enviar a mensagem de resposta com os resultados da pesquisa
                     resposta_licitacoes = [f"""
-                        Informações sobre o pregão:
-                        - Modalidade: {licitacao['modalidade']}
-                        - Estado: {licitacao['orgao_uf']}
-                        - Objeto: {licitacao['objeto']}
-                        - Edital: {licitacao['edital']}
+                        Informações sobre o pregão:\n
+                        - Modalidade: {licitacao['modalidade']}\n
+                        - Estado: {licitacao['orgao_uf']}\n
+                        - Objeto: {licitacao['objeto']}\n
+                        - Edital: {licitacao['edital']}\n
                         - Situação: {licitacao['situacao']}
                         """ for licitacao in data]
                     dispatcher.utter_message(text="\n".join(resposta_licitacoes))
